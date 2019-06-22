@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+body {
+    display: flex;
+    overflow: hidden;
+    /* grid-template-columns: 15vw auto;
+    grid-template-areas:
+    'header main'; */
+    flex-direction: row;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 1fr 3fr 0.25fr;
+    grid-template-areas: 
+    'logo'
+    'command'
+    'footer';
+    border: 1px solid black;
+    min-width: 15vw;
+
+}
+
+h1 {
+    grid-area: logo;
+    font-family: 'Bungee Shade', cursive;
+}
+
+.commands {
+    grid-area: command;
+    align-self: center;
+}
+
+footer {
+    grid-area: footer;
+    align-items: center;
+}
+
+/* BEGIN DROPDOWN LIST */
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+/* END DROPDOWN LIST */
+
+/* Animation for Footer */
+
+.xjuggl3r {
+    text-decoration: none;
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: 1em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.xjuggl3r:hover {
+    animation-play-state: paused;
+}
+
+.xjuggl3r:hover, .xjuggl3r:visited {
+    color: inherit;
+}
+
+
+@keyframes text-shadow {
+    0% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+
+    20% {  
+        transform: translateY(-1em);
+        text-shadow: 
+            0 0.125em 0 #0c2ffb, 
+            0 0.25em 0 #2cfcfd, 
+            0 -0.125em 0 #fb203b, 
+            0 -0.25em 0 #fefc4b;
+    }
+
+    40% {  
+        transform: translateY(0.5em);
+        text-shadow: 
+            0 -0.0625em 0 #0c2ffb, 
+            0 -0.125em 0 #2cfcfd, 
+            0 0.0625em 0 #fb203b, 
+            0 0.125em 0 #fefc4b;
+    }
+    
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow: 
+            0 0.03125em 0 #0c2ffb, 
+            0 0.0625em 0 #2cfcfd, 
+            0 -0.03125em 0 #fb203b, 
+            0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
+/* END OF FOOTER ANIMATION */
